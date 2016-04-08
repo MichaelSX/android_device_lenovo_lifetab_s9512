@@ -1,6 +1,6 @@
 #Cm 12.1 for Medion Lifetab S9512
-==========================
-I'm not responsible for your device if anything breaks. I'm just doing this to improve my own device and want to share this with people that aim to do the same. I'm still learning as everyone, so please stay calm :)
+---------------------------------
+I'm not responsible for your device if anything breaks. I'm just doing this to improve my own device and want to share this with people that aim to do the same. I'm still learning as everyone, so please keep that in mind :)
 
 Changelog
 ---------------
@@ -10,7 +10,7 @@ Using this
 ---------------
 Reffering to the [CyanogenMod Porting Tutorial](https://wiki.cyanogenmod.org/w/Doc:_porting_intro).
 
-Get your locale Manifest like this:´
+Get your locale Manifest like this:Â´
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<manifest>
@@ -19,27 +19,27 @@ Get your locale Manifest like this:´
 	</manifest>
 
 When doing your repo sync, it should sync into your device directory.
-Then do:´
+Then do:Â´
 
 	source build/envsetup.sh
 	lunch
 	make recoveryimage
 
-Your CyanogenMod Recovery should be build to:´
+Your CyanogenMod Recovery should be build to:Â´
 	
 	out/target/product/lifetab_s9512/recovery.img
 
-Connect your device and use from your platform-tools sdk-folder:´
+Connect your device and use from your platform-tools sdk-folder:Â´
 
 	adb push (directory_to_your_working_directory_for_s9512)/out/target/product/lifetab_s9512/recovery.img /sdcard/recovery.img
 
-To flash the file(referring to[this XDA-Thread](http://forum.xda-developers.com/showthread.php?t=2063132), use:´
+To flash the file(referring to[this XDA-Thread](http://forum.xda-developers.com/showthread.php?t=2063132), use:Â´
 
 	adb shell
 	su
 	dd if=/sdcard/recovery.img of=/dev/block/platform/omap/omap_hsmmc.1/by-name/recovery
 
-After booting into recovery by using:´
+After booting into recovery by using:Â´
 
 	adb reboot recovery
 
