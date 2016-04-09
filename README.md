@@ -4,7 +4,8 @@ I'm not responsible for your device if anything breaks. I'm just doing this to i
 
 Changelog
 ---------------
--2016/04/07 Recovery working
+-2016/04/07 Recovery booting, seems like selection of flashing is not working. 
+-2016/04/08 started to compile twrp touch for better support with broken volume keys. 
 
 Using this
 ---------------
@@ -14,8 +15,7 @@ Get your locale Manifest like this:´
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<manifest>
-  		<project name="MichaelSX/android_device_lenovo_lifetab_s9512" path="device/lenovo/lifetab_s9512" remote="github" revision="cm-12.1" />
-  		<project name="fat-tire/android_kernel_lenovo_lifetab_S9512" path="kernel/lenovo/lifetab_s9512" remote="github" revision="cm-12.1" />
+  		<project name="MichaelSX/android_device_lenovo_lifetab_s9512" path="device/lenovo/lifetab_s9512" remote="github" revision="master" />
 	</manifest>
 
 When doing your repo sync, it should sync into your device directory.
@@ -43,7 +43,7 @@ After booting into recovery by using:´
 
 	adb reboot recovery
 
-you should see the workin recovery.
+you should see the cyanogenmod recovery. It still is in progress. 
 	
 More Information to the whole build process: [CyanogenMod Wiki](http://wiki.cyanogenmod.org/) for building instructions.
 
