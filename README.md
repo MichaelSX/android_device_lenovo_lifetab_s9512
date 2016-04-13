@@ -5,6 +5,7 @@ I'm not responsible for your device if anything breaks. I'm just doing this to i
 Changelog
 ---------------
 -2016/04/07 Recovery booting, seems like selection of flashing is not working. 
+
 -2016/04/08 started to compile twrp touch for better support with broken volume keys. 
 
 Using this
