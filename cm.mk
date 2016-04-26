@@ -5,7 +5,7 @@ PRODUCT_RELEASE_NAME := Lifetab-S9512
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/lenovo/lifetab-s9512/device_lifetab-s9512.mk)
+$(call inherit-product, device/lenovo/lifetab_s9512/device_lifetab_s9512.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := lifetab_s9512
