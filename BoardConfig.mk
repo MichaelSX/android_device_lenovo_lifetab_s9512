@@ -1,11 +1,12 @@
-<<<<<<< HEAD
+#<<<<<<< HEAD
 #First kernel try referring to armv7-a-neon
-
 # inherit from the proprietary version
 #preset
 -include vendor/lenovo/lifetab_s9512/BoardConfigVendor.mk
 USE_CAMERA_STUB := true
 TARGET_NO_BOOTLOADER := true
+TARGET_KERNEL_SOURCE := kernel/lenovo/ideatab_s2109
+TARGET_KERNEL_CONFIG := lifetab_s9512_defconfig
 TARGET_PREBUILT_KERNEL := device/lenovo/lifetab_s9512/kernel
 TARGET_BOOTLOADER_BOARD_NAME := lifetab_s9512
 
