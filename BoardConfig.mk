@@ -33,8 +33,8 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_NO_SELECT_BUTTON := true#powerbutton required for selection
 
 #twrp by xda-tutorial of Dees_Troy
-#RECOVERY_VARIANT := twrp#comment for cmr
-#TW_THEME := landscape_hdpi#others:portrait_hdpi, portrait_mdpi, landscape_mdpi, watch_mdpi
+RECOVERY_VARIANT := twrp#comment for cmr
+TW_THEME := landscape_hdpi#others:portrait_hdpi, portrait_mdpi, landscape_mdpi, watch_mdpi
 #RECOVERY_SDCARD_ON_DATA := true#for Handling of /data
 #BOARD_HAS_NO_REAL_SDCARD := true#disables partitioning
 #TW_NO_BATT_PERCENT := true#if everything is okay disable to see percantage of battery in recovery
