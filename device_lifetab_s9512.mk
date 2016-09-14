@@ -22,3 +22,5 @@ $(call inherit-product, build/target/product/full.mk)
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_lifetab_s9512
 PRODUCT_DEVICE := lifetab_s9512
+
+PRODUCT_AAPT_PREF_CONFIG := hdpi
