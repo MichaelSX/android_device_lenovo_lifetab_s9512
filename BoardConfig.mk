@@ -3,6 +3,7 @@
 # inherit from the proprietary version
 #preset
 -include vendor/lenovo/lifetab_s9512/BoardConfigVendor.mk
+-include device/samsung/omap4-commun/BoardConfigCommon.mk
 USE_CAMERA_STUB := true
 TARGET_NO_BOOTLOADER := true
 TARGET_KERNEL_SOURCE := kernel/lenovo/ideatab_s2109
