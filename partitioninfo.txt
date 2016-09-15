@@ -1,0 +1,85 @@
+###
+### ls -al /dev/block/platfomr/omap/omap_hsmmc.1/by-name
+###
+
+lrwxrwxrwx root     root              2016-09-15 15:19 FTM -> /dev/block/mmcblk0p5
+lrwxrwxrwx root     root              2016-09-15 15:19 FTMData -> /dev/block/mmcblk0p6
+lrwxrwxrwx root     root              2016-09-15 15:19 ManufactureData -> /dev/block/mmcblk0p4
+lrwxrwxrwx root     root              2016-09-15 15:19 SecureFS -> /dev/block/mmcblk0p7
+lrwxrwxrwx root     root              2016-09-15 15:19 boot -> /dev/block/mmcblk0p12
+lrwxrwxrwx root     root              2016-09-15 15:19 bootloader -> /dev/block/mmcblk0p2
+lrwxrwxrwx root     root              2016-09-15 15:19 cache -> /dev/block/mmcblk0p14
+lrwxrwxrwx root     root              2016-09-15 15:19 cda -> /dev/block/mmcblk0p15
+lrwxrwxrwx root     root              2016-09-15 15:19 hidden -> /dev/block/mmcblk0p10
+lrwxrwxrwx root     root              2016-09-15 15:19 pidinfo -> /dev/block/mmcblk0p8
+lrwxrwxrwx root     root              2016-09-15 15:19 recovery -> /dev/block/mmcblk0p11
+lrwxrwxrwx root     root              2016-09-15 15:19 splash -> /dev/block/mmcblk0p9
+lrwxrwxrwx root     root              2016-09-15 15:19 system -> /dev/block/mmcblk0p13
+lrwxrwxrwx root     root              2016-09-15 15:19 systeminfo -> /dev/block/mmcblk0p3
+lrwxrwxrwx root     root              2016-09-15 15:19 userdata -> /dev/block/mmcblk0p16
+lrwxrwxrwx root     root              2016-09-15 15:19 xloader -> /dev/block/mmcblk0p1
+
+###
+###df info 
+###
+
+Filesystem             Size   Used   Free   Blksize
+Filesystem             Size   Used   Free   Blksize
+/dev                   328M    64K   328M   4096
+/mnt/asec              328M     0K   328M   4096
+/mnt/obb               328M     0K   328M   4096
+/system                503M   404M    99M   4096
+/data                   13G     2G    11G   4096
+/cache                 251M     4M   247M   4096
+/factory                62M     4M    58M   4096
+/hidden                 31M    16M    15M   4096
+/hidden/data           127M    27M    99M   4096
+/mnt/sdcard             13G     2G    11G   4096
+
+###
+###mounts
+###
+
+rootfs / rootfs ro,relatime 0 0
+tmpfs /dev tmpfs rw,nosuid,relatime,mode=755 0 0
+devpts /dev/pts devpts rw,relatime,mode=600 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,relatime 0 0
+none /acct cgroup rw,relatime,cpuacct 0 0
+tmpfs /mnt/asec tmpfs rw,relatime,mode=755,gid=1000 0 0
+tmpfs /mnt/obb tmpfs rw,relatime,mode=755,gid=1000 0 0
+none /dev/cpuctl cgroup rw,relatime,cpu 0 0
+/dev/block/platform/omap/omap_hsmmc.1/by-name/system /system ext4 ro,relatime,barrier=1,data=ordered 0 0
+/dev/block/platform/omap/omap_hsmmc.1/by-name/userdata /data ext4 rw,nosuid,nodev,noatime,barrier=1,nomblk_io_submit,data=ordered 0 0
+/dev/block/platform/omap/omap_hsmmc.1/by-name/cache /cache ext4 rw,nosuid,nodev,noatime,barrier=1,nomblk_io_submit,data=ordered 0 0
+/dev/block/platform/omap/omap_hsmmc.1/by-name/SecureFS /factory ext4 ro,relatime,barrier=1,data=ordered 0 0
+/dev/block/platform/omap/omap_hsmmc.1/by-name/hidden /hidden ext4 rw,nosuid,nodev,relatime,barrier=1,data=ordered 0 0
+/dev/block/platform/omap/omap_hsmmc.1/by-name/cda /hidden/data ext4 rw,nosuid,nodev,relatime,barrier=1,data=ordered 0 0
+/sys/kernel/debug /sys/kernel/debug debugfs rw,relatime 0 0
+/dev/fuse /mnt/sdcard fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+
+###
+###partitions
+###
+
+major minor  #blocks  name
+
+ 179        0   15532032 mmcblk0
+ 179        1        128 mmcblk0p1
+ 179        2        256 mmcblk0p2
+ 179        3         64 mmcblk0p3
+ 179        4       1024 mmcblk0p4
+ 179        5       8192 mmcblk0p5
+ 179        6      65536 mmcblk0p6
+ 179        7      65536 mmcblk0p7
+ 259        0        512 mmcblk0p8
+ 259        1       6144 mmcblk0p9
+ 259        2      32768 mmcblk0p10
+ 259        3       8192 mmcblk0p11
+ 259        4       8192 mmcblk0p12
+ 259        5     524288 mmcblk0p13
+ 259        6     262144 mmcblk0p14
+ 259        7     131072 mmcblk0p15
+ 259        8   14417408 mmcblk0p16
+ 179       16       4096 mmcblk0boot1
+ 179        8       4096 mmcblk0boot0
