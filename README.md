@@ -1,10 +1,10 @@
-###Cm 12.1 for Medion Lifetab S9512
+#Cm 12.1 for Medion Lifetab S9512
 ---------------------------------
 I'm not responsible for your device if anything breaks. 
 I'm just doing this to improve my own device and want to share this with people that aim to do the same. 
 This project is kept as an hobby, so improvements will come really slowly.
 
-#Changelog
+###Changelog
 ---------------
 -2016/04/07 Recovery booting, seems like selection of flashing is not working. 
 
@@ -12,7 +12,7 @@ This project is kept as an hobby, so improvements will come really slowly.
 
 -2016/09/14 added PRODUCT_AAPT_PREF_CONFIG to device.mk to prevent fonts_log error
 
-#Using this
+###Using this
 ---------------
 Reffering to the [CyanogenMod Porting Tutorial](https://wiki.cyanogenmod.org/w/Doc:_porting_intro).
 
@@ -56,7 +56,7 @@ For more information on this Github Organization and how it is structured,
 please [read the wiki article](http://wiki.cyanogenmod.org/index.php/Github_Organization)
 
 
-#Partitionsheme:
+###Partitionsheme:
 |Partition|name|mountpoint|size|blocksize|
 |:---|:---|:---|:---|:---|
 |`mmcblk0p1`|`xloader`||||
