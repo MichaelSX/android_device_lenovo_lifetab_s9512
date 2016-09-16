@@ -12,6 +12,8 @@ This project is kept as an hobby, so improvements will come really slowly.
 
 -2016/09/14 added PRODUCT_AAPT_PREF_CONFIG to device.mk to prevent fonts_log error
 
+-2016/09/14 reverted twrp-flags for working CM-Recovery
+
 ###Using this
 ---------------
 Reffering to the [CyanogenMod Porting Tutorial](https://wiki.cyanogenmod.org/w/Doc:_porting_intro).
@@ -20,7 +22,14 @@ Get your locale Manifest like this:
 ```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<manifest>
-  		<project name="MichaelSX/android_device_lenovo_lifetab_s9512" path="device/lenovo/lifetab_s9512" remote="github" revision="master" />
+		<remote name="omap" fetch="git://git.omapzoom.org/"/>
+
+		<project name="MichaelSX/android_kernel_lenovo_lifetab_s9512" path="kernel/lenovo/lifetab_s9512" remote="github" revision="master" />
+		<project name="MichaelSX/android_device_lenovo_lifetab_s9512" path="device/lenovo/lifetab_s9512" remote="github" revision="master" />
+
+		<project name="omnirom/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="android-7.0" />
+		<project name="CyanogenMod/android_external_busybox" path="external/busybox" remote="github" revision="cm-13.0" />
+		<project name="CyanogenMod/android_device_samsung_omap4-common" path="device/samsung/omap4-common" remote="github" revision="cm-12.1" />
 	</manifest>
 ```
 When doing your repo sync, it should sync into your device directory.
