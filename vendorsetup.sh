@@ -1,0 +1,1 @@
+add_lunch_combo cm_lifetab_s9512-userdebug
