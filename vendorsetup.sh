@@ -1,1 +1,2 @@
 add_lunch_combo omni_lifetab_s9512-userdebug
+add_lunch_combo omni_lifetab_s9512-eng
