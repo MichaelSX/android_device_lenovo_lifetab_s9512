@@ -1,46 +1,46 @@
-#Cm 12.1 for Medion Lifetab S9512
+# Cm 12.1 for Medion Lifetab S9512
 ---------------------------------
-I'm not responsible for your device if anything breaks. 
-I'm just doing this to improve my own device and want to share this with people that aim to do the same. 
-This project is kept as an hobby, so improvements will come really slowly.
+I'm not responsible for device failures or anything else that goes wrong with this build instructions. Everything you do with this repo is on your own risk.
+The build is not functional until now. 
+I'm just doing this to improve my own device and want to have a repository to keep track of it.
 
-###Changelog
+### Changelog
 ---------------
--2016/04/07 Recovery booting, seems like selection of flashing is not working. 
+- 2018/07/20 downloaded original rom and copied fstab; updated ReadME for Usage of LineageOS due to new system setup
+- 2016/04/07 Recovery booting, seems like selection of flashing is not working.
+- 2016/04/08 started to compile twrp touch for better support with broken volume keys.
+- 2016/09/14 added PRODUCT_AAPT_PREF_CONFIG to device.mk to prevent fonts_log error
+- 2016/09/14 reverted twrp-flags for working CM-Recovery
 
--2016/04/08 started to compile twrp touch for better support with broken volume keys. 
-
--2016/09/14 added PRODUCT_AAPT_PREF_CONFIG to device.mk to prevent fonts_log error
-
--2016/09/14 reverted twrp-flags for working CM-Recovery
-
-###Using this
+### Using this
 ---------------
-Reffering to the [CyanogenMod Porting Tutorial](https://wiki.cyanogenmod.org/w/Doc:_porting_intro).
+The steps mentioned in  [the LineageOS wiki for i9100](https://wiki.lineageos.org/devices/i9100/build) can be followed up to the point [Initialize the LineageOS repository](https://wiki.lineageos.org/devices/i9100/build#initialize-the-lineageos-source-repository-1). In this build cm 12.1 will be used instead of 14.1.
 
 Get your locale Manifest like this:
 ```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<manifest>
 		<remote name="omap" fetch="git://git.omapzoom.org/"/>
+		<remote name="github" fetch="https://github.com/" />
 
 		<project name="MichaelSX/android_kernel_lenovo_lifetab_s9512" path="kernel/lenovo/lifetab_s9512" remote="github" revision="master" />
 		<project name="MichaelSX/android_device_lenovo_lifetab_s9512" path="device/lenovo/lifetab_s9512" remote="github" revision="master" />
 
 		<project name="omnirom/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="android-7.0" />
-		<project name="CyanogenMod/android_external_busybox" path="external/busybox" remote="github" revision="cm-13.0" />
-		<project name="CyanogenMod/android_device_samsung_omap4-common" path="device/samsung/omap4-common" remote="github" revision="cm-12.1" />
+		<project name="LineageOS/android_external_busybox" path="external/busybox" remote="github" revision="cm-12.1" />
+		<project name="LineageOS/android_device_samsung_omap4-common" path="device/samsung/omap4-common" remote="github" revision="cm-12.1" />
 	</manifest>
 ```
-When doing your repo sync, it should sync into your device directory.
+When doing your repo sync again, it should sync this and other required repositories listed in the manifest into your device directory.
 Then do:
 ```bash
 	source build/envsetup.sh
-	lunch
+	add_lunch_combo cm_lifetab_s9512-userdebug
+	lunch cm_lifetab_s9512-userdebug
 	make recoveryimage
 ```
-Your CyanogenMod Recovery should be build to:
-```bash	
+Your Clockworkmod Recovery should be build to:
+```bash
 	out/target/product/lifetab_s9512/recovery.img
 ```
 Connect your device and use from your platform-tools sdk-folder:
@@ -57,15 +57,9 @@ After booting into recovery by using:
 ```bash
 	adb reboot recovery
 ```
-you should see the recovery. 
-	
-More Information to the whole build process: [CyanogenMod Wiki](http://wiki.cyanogenmod.org/) for building instructions.
+you should see the recovery.
 
-For more information on this Github Organization and how it is structured,
-please [read the wiki article](http://wiki.cyanogenmod.org/index.php/Github_Organization)
-
-
-###Partitionsheme:
+### Partitionsheme:
 |Partition|name|mountpoint|size|blocksize|blocks|blocks*1024|
 |:---|:---|:---|:---|:---|:---|:---|
 |`mmcblk0p1`|`xloader`||||128|131072|
