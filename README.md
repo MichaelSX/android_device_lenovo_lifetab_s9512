@@ -6,7 +6,7 @@ I'm just doing this to improve my own device and want to have a repository to ke
 
 ### Changelog
 ---------------
-- 2018/07/20 downloaded original rom and copied fstab; updated ReadME for Usage of LineageOS due to new system setup
+- 2018/07/20 downloaded original rom and copied fstab &rarr; mounting in recovery is working; updated README for Usage of LineageOS due to new system setup
 - 2016/04/07 Recovery booting, seems like selection of flashing is not working.
 - 2016/04/08 started to compile twrp touch for better support with broken volume keys.
 - 2016/09/14 added PRODUCT_AAPT_PREF_CONFIG to device.mk to prevent fonts_log error
