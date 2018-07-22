@@ -14,9 +14,9 @@ I'm just doing this to improve my own device and want to have a repository to ke
 
 ### Using this
 ---------------
-The steps mentioned in  [the LineageOS wiki for i9100](https://wiki.lineageos.org/devices/i9100/build) can be followed up to the point [Initialize the LineageOS repository](https://wiki.lineageos.org/devices/i9100/build#initialize-the-lineageos-source-repository-1). In this build cm 12.1 will be used instead of 14.1.
+The steps mentioned in  [the LineageOS wiki for i9100](https://wiki.lineageos.org/devices/i9100/build) can be followed up to the point [Initialize the LineageOS repository](https://wiki.lineageos.org/devices/i9100/build#initialize-the-lineageos-source-repository-1). In this build cm 12.1 will be used instead of 14.1. The saved [Porting Tutorial of fat-tire](https://fat-tire.github.io/porting-intro.html) is really helpful.
 
-Get your locale Manifest like this:
+Get your locale Manifest as roomservice.xml in `.repo/local_manifests` like this:
 ```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<manifest>
