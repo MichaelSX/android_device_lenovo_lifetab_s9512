@@ -6,6 +6,7 @@ I'm just doing this to improve my own device and want to have a repository to ke
 
 ### Changelog
 ---------------
+- 2018/07/23 added lunch_combo for easier building
 - 2018/07/20 downloaded original rom and copied fstab &rarr; mounting in recovery is working; updated README for Usage of LineageOS due to new system setup
 - 2016/04/07 Recovery booting, seems like selection of flashing is not working.
 - 2016/04/08 started to compile twrp touch for better support with broken volume keys.
@@ -35,7 +36,6 @@ When doing your repo sync again, it should sync this and other required reposito
 Then do:
 ```bash
 	source build/envsetup.sh
-	add_lunch_combo cm_lifetab_s9512-userdebug
 	lunch cm_lifetab_s9512-userdebug
 	make recoveryimage
 ```
